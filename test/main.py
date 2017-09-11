@@ -2,8 +2,6 @@
 
 # main test rasposhot
 
-##colpa di tumittu
-
 import api_linkage
 import gameapi
 
