@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# main test rasposhot
+
 import api_linkage
 import gameapi
 
