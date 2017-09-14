@@ -16,16 +16,35 @@ def get():
             if on_key_down is not None:
                 on_key_down(event.key)
             if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                left()
+                if gameloop == True:
+                    left()
+                else:
+                    pass
             if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                right()
+                if gameloop == True:
+                    right()
+                else:
+                    pass
             if event.key == pygame.K_p:
-                pause()
+                if gameloop == True:
+                    pause()
+                else:
+                    pass
             if event.key == pygame.K_UP or event.key == pygame.K_SPACE or event.key == pygame.K_w:
-                jump()
+                if gameloop == True:
+                    jump()
+                else:
+                    pass
             if event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                crouch()
+                if gameloop == True:
+                    crouch()
+                else:
+                    pass
                 
 
-##        elif event.type == pygame.KEYUP:
+       elif event.type == pygame.KEYUP:
+           if on_key_down is not None:
+                on_key_down(event.key)
+            if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                stop()
             
