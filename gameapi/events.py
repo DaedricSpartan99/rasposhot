@@ -1,12 +1,9 @@
 import pygame
 import calls
+import actions
 
 # handler for key down
 on_key_down = None
-
-block_size = 0
-lead_x_change = 0
-lead_y_change = 0
 
 def get():
     
@@ -19,11 +16,15 @@ def get():
             if on_key_down is not None:
                 on_key_down(event.key)
             if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                lead_x_change = -block_size
+                left()
             if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                lead_x_change = block_size
+                right()
             if event.key == pygame.K_p:
                 pause()
+            if event.key == pygame.K_UP or event.key == pygame.K_SPACE or event.key == pygame.K_w:
+                jump()
+            if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                crouch()
                 
 
 ##        elif event.type == pygame.KEYUP:
